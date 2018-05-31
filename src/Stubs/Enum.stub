@@ -5,9 +5,9 @@ namespace DummyNamespace;
 use Iwannamaybe\Enum\AbstractEnumeration as Enum;
 /**
  * Class DummyClass
- * @method static HttpMethod OptionOne
- * @method static HttpMethod OptionTwo
- * @method static HttpMethod OptionThree
+ * @method static DummyClass OptionOne
+ * @method static DummyClass OptionTwo
+ * @method static DummyClass OptionThree
  *
  * @package DummyNamespace
  */
