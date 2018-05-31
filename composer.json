@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Eloquent\\Enumeration\\": "src"
+            "Iwannamaybe\\Enum\\": "src"
         }
     },
     "extra": {
