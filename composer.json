@@ -1,0 +1,41 @@
+{
+    "name": "iwannamaybe/enum",
+    "description": "An enumeration implementation for PHP.",
+    "keywords": [
+        "enum",
+        "enumeration",
+        "set",
+        "class",
+        "multiton",
+        "type"
+    ],
+    "homepage": "https://github.com/iwannamaybe/enum",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "I For New",
+            "email": "i@ifornew.com",
+            "homepage": "http://www.ifornew.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "icecave/archer": "dev-develop",
+        "phpunit/phpunit": "^4",
+        "sami/sami": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eloquent\\Enumeration\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iwannamaybe\\Enum\\EnumServiceProvider"
+            ]
+        }
+    }
+}
