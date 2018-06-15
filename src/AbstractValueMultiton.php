@@ -2,6 +2,7 @@
 
 namespace Iwannamaybe\Enum;
 
+use Illuminate\Support\Collection;
 use Iwannamaybe\Enum\Exception\ExtendsConcreteException;
 use Iwannamaybe\Enum\Exception\UndefinedMemberExceptionInterface;
 
@@ -122,7 +123,7 @@ abstract class AbstractValueMultiton extends AbstractMultiton implements
 	/**
 	 * Get the select collections og the enum
 	 *
-	 * @return Collection
+	 * @return \Illuminate\Support\Collection
 	 */
 	final public static function getSelector()
 	{
