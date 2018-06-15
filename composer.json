@@ -24,7 +24,8 @@
     "require-dev": {
         "icecave/archer": "dev-develop",
         "phpunit/phpunit": "^4",
-        "sami/sami": "^3"
+        "sami/sami": "^3",
+        "illuminate/support": "5.5.*"
     },
     "autoload": {
         "psr-4": {
