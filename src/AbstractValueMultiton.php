@@ -125,14 +125,14 @@ abstract class AbstractValueMultiton extends AbstractMultiton implements
 	 *
 	 * @return \Illuminate\Support\Collection
 	 */
-	final public static function getSelector()
+	final public static function getCollection()
 	{
-		$select = new Collection();
+		$collection = new Collection();
 		foreach (self::members() as $member) {
-			$select->put($member->value, $member->description);
+			$collection->put($member->value, $member->description);
 		}
 
-		return $select;
+		return $collection;
 	}
 
 	/**
