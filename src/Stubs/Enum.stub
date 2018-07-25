@@ -3,8 +3,9 @@
 namespace DummyNamespace;
 
 use Iwannamaybe\Enum\AbstractEnumeration as Enum;
+
 /**
- * Class DummyClass
+ * Enum DummyClass
  * @method static DummyClass OptionOne
  * @method static DummyClass OptionTwo
  * @method static DummyClass OptionThree
