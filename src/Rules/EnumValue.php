@@ -6,14 +6,22 @@ use Illuminate\Contracts\Validation\Rule;
 
 class EnumValue implements Rule
 {
+	/**
+	 * @var \Illuminate\Support\Collection $validValues
+	 */
 	private $validValues;
 
 	/**
-	 * Create a new rule instance.
+	 * EnumValue constructor.
+	 * @param string $enum
+	 * @param array|\Illuminate\Support\Collection|null   $excepts
 	 */
-	public function __construct(string $enum)
+	public function __construct(string $enum,$excepts=null)
 	{
 		$this->validValues = $enum::getCollection();
+		if($excepts!=null){
+			$this->validValues=$this->validValues->except($excepts);
+		}
 	}
 
 	/**
