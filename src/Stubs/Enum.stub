@@ -5,18 +5,19 @@ namespace DummyNamespace;
 use Iwannamaybe\Enum\AbstractEnumeration as Enum;
 
 /**
- * Enum DummyClass
- * @method static DummyClass OptionOne
- * @method static DummyClass OptionTwo
- * @method static DummyClass OptionThree
+ * Enum: DummyClass
+
+ * @method static DummyClass OPTION_ONE
+ * @method static DummyClass OPTION_TWO
+ * @method static DummyClass OPTION_THREE
  *
  * @package DummyNamespace
  */
 final class DummyClass extends Enum
 {
-    const OptionOne = 0;
-    const OptionTwo = 1;
-    const OptionThree = 2;
+    const OPTION_ONE = 0;
+    const OPTION_TWO = 1;
+    const OPTION_THREE = 2;
 
     /**
      * Get the description for an enum value
@@ -28,14 +29,14 @@ final class DummyClass extends Enum
     final public static function getDescription($value): string
     {
         switch ($value){
-            case self::OptionOne:
+            case self::OPTION_ONE:
         		return 'OptionOne';
-        	case self::OptionTwo:
+        	case self::OPTION_TWO:
         		return 'OptionTwo';
-        	case self::OptionThree:
+        	case self::OPTION_THREE:
         		return 'OptionThree';
         	default:
-        		return self::memberByValue($value);
+        		return null;
         }
     }
 }
