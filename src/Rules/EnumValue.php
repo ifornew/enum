@@ -4,6 +4,10 @@ namespace Iwannamaybe\Enum\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
+/**
+ * Rule:EnumValue
+ * @package Iwannamaybe\Enum\Rules
+ */
 class EnumValue implements Rule
 {
 	/**
