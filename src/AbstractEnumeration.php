@@ -1,4 +1,5 @@
 <?php
+
 namespace Iwannamaybe\Enum;
 
 use ReflectionClass;
@@ -9,21 +10,30 @@ use ReflectionClass;
  * @api
  */
 abstract class AbstractEnumeration extends AbstractValueMultiton implements
-    EnumerationInterface
+	EnumerationInterface, \JsonSerializable
 {
-    /**
-     * Initializes the members of this enumeration based upon its class
-     * constants.
-     *
-     * Each constant becomes a member with a string key equal to the constant's
-     * name, and a value equal to that of the constant's value.
-     */
-    final protected static function initializeMembers()
-    {
-        $reflector = new ReflectionClass(get_called_class());
+	/**
+	 * Initializes the members of this enumeration based upon its class
+	 * constants.
+	 *
+	 * Each constant becomes a member with a string key equal to the constant's
+	 * name, and a value equal to that of the constant's value.
+	 */
+	final protected static function initializeMembers()
+	{
+		$reflector = new ReflectionClass(get_called_class());
 
-        foreach ($reflector->getConstants() as $key => $value) {
-            new static($key, $value,static::getDescription($value));
-        }
-    }
+		foreach ($reflector->getConstants() as $key => $value) {
+			new static($key, $value, static::getDescription($value));
+		}
+	}
+
+	final public function jsonSerialize()
+	{
+		return [
+			'key'         => $this->key(),
+			'value'       => $this->value(),
+			'description' => $this->description()
+		];
+	}
 }
