@@ -29,6 +29,7 @@ class EnumKey implements Rule
 	 */
 	public function __construct(string $enum, $excepts = null, bool $isCaseSensitive = false)
 	{
+		$this->isCaseSensitive=$isCaseSensitive;
 		$this->validValues = $enum::members();
 		if ($excepts != null) {
 			$this->validValues = array_except($this->validValues, $excepts);
